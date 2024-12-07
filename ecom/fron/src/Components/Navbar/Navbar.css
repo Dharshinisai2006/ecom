@@ -282,3 +282,37 @@
         background-color: #f3f3f3;
     }
 }
+.nav-menu a,
+.nav-menu-mobile a,
+.nav-login-cart a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Ensures the link inherits the text color */
+}
+
+.nav-menu a:hover,
+.nav-menu-mobile a:hover,
+.nav-login-cart a:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+  color: #007bff; /* Optional: changes color on hover */
+}
+.nav-menu li,
+.nav-menu-mobile li {
+  position: relative;
+}
+
+.nav-menu li hr,
+.nav-menu-mobile li hr {
+  display: none;
+  height: 2px;
+  background-color: red;
+  border: none;
+  margin: 0;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+
+.nav-menu li.active hr,
+.nav-menu-mobile li.active hr {
+  display: block;
+}
