@@ -2,63 +2,75 @@
     height: 100vh;
     background: linear-gradient(180deg, #b6fc03, #e1ffea22 60%);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .hero-left {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 20px;
-    padding-left: 180px;
-    line-height: 1.1;
+    text-align: center;
 }
 
 .hero-left h2 {
     color: #090909;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
 }
 
-.hero-left p {
+.hero-left .hero-text {
     color: #171717;
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 700;
+    margin: 0;
 }
 
 .hero-hand-icon {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-hand-icon p {
+    font-size: 18px; /* Default font size */
+    font-weight: 600;
 }
 
 .hero-hand-icon img {
-    height: 50px;
-    width: 50px;
+    width: 80px; /* Default size */
+    height: 80px;
 }
 
 .log {
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     border: 2px solid lightgreen;
-    background-image: url("../Assets/logo.jpg"); /* Adjust path */
+    background-image: url("../Assets/logo.jpg"); /* Update logo path */
     background-size: cover;
 }
 
 .hero-latest-btn {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
-    border-radius: 75px;
-    margin-top: 30px;
-    background: lightseagreen;
+    gap: 10px;
+    width: 220px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: lightseagreen;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
+    justify-content: center;
 }
 
 .hero-right {
@@ -66,35 +78,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 1000px; /* Perspective for 3D effect */
+    perspective: 1000px;
 }
 
 .flip-card {
+    width: 500px;
+    height: 500px;
     position: relative;
-    width: 500px; /* Match the size of the image */
-    height: 500px; /* Match the size of the image */
+    transform-style: preserve-3d;
     transition: transform 0.6s;
-    transform-style: preserve-3d; /* 3D effect */
 }
 
 .flip-card:hover {
-    transform: rotateY(180deg); /* Flip effect on hover */
+    transform: rotateY(180deg);
 }
 
 .card-front,
 .card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hide back side when not flipped */
+    width: 400px;
+    height: 400px;
+    backface-visibility: hidden;
     border-radius: 50%;
     background-size: cover;
 }
 
 .card-front {
-    background-image: url("../Assets/hero_image.jpg"); /* Adjust path */
-    /* Glow effect when hovering over the front */
-    box-shadow: 0 0 10px yellow, 0 0 20px green, 0 0 30px yellow; /* Add glow effect */
+    background-image: url("../Assets/hero_image.jpg"); /* Update hero image path */
+    box-shadow: 0 0 10px yellow, 0 0 20px green, 0 0 30px yellow;
+    border-radius: 50%;
 }
 
 .card-back {
@@ -105,5 +117,74 @@
     color: #171717;
     font-size: 24px;
     font-weight: 700;
-    transform: rotateY(180deg); /* Rotate back side */
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Laptop screen size adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-hand-icon p {
+        font-size: 30px; /* Larger font size for laptops */
+    }
+
+    .hero-hand-icon img {
+        width: 50px; /* Larger icon size for laptops */
+        height: 50px;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-left {
+        padding-left: 15px;
+        text-align: center;
+    }
+
+    .hero-left h2 {
+        font-size: 20px;
+    }
+
+    .hero-left .hero-text {
+        font-size: 28px;
+    }
+
+    .hero-hand-icon p {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .hero-hand-icon img {
+        width: 35px; /* Smaller icon size for mobile */
+        height: 35px;
+    }
+
+    .log {
+        height: 45px;
+        width: 45px;
+    }
+
+    .hero-latest-btn {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .hero-right {
+        margin-top: 20px;
+    }
+
+    .flip-card {
+        width: 250px;
+        height: 250px;
+    }
+    .card-front,
+.card-back {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    background-size: cover;
+}
 }

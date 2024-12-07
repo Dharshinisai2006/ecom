@@ -19,24 +19,26 @@ const ShopCategory = (props) => {
           Sort by <img src={dropdown_icon} alt="Sort" />
         </div>
       </div>
-      <div className="shopcategory-products">
-        {all_product.map((item, i) => {
-          if (props.category === item.category) {
-            return (
-              <div className="product-item" key={i}>
-                <Item
-                  id={item.id}
-                  name={item.name}
-                  image={item.image}
-                  new_price={item.new_price}
-                  old_price={item.old_price}
-                />
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
+      <div className="shopcategory-products-wrapper">
+        <div className="shopcategory-products">
+          {all_product.map((item, i) => {
+            if (props.category === item.category) {
+              return (
+                <div className="product-item" key={i}>
+                  <Item
+                    id={item.id}
+                    name={item.name}
+                    image={item.image}
+                    new_price={item.new_price}
+                    old_price={item.old_price}
+                  />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
     </div>
   );

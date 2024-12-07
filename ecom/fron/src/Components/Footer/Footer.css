@@ -6,7 +6,7 @@
     gap: 30px;
     background-color: white;
     padding: 40px 0;
-    color: black; /* Ensures text is visible on dark background */
+    color: black;
 }
 
 .footer-logo {
@@ -16,14 +16,14 @@
 }
 
 .footer-logo img {
-    height: 100px; 
-    width: 100px;   
+    height: 100px;
+    width: 100px;
 }
 
 .footer-logo p {
     font-size: 24px;
     font-weight: 700;
-    color: black;  
+    color: black;
     margin: 0;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .footer-links li:hover {
-    color: rgb(0, 0, 0);
+    color: #2A9D8F;
 }
 
 .footer-social-icon {
@@ -55,7 +55,6 @@
     padding: 10px;
     background: white;
     border-radius: 50%;
-    
 }
 
 .footer-icons-container img {
@@ -64,7 +63,7 @@
 }
 
 .footer-icons-container:hover {
-    background-color: rgb(47, 213, 175);
+    background-color: #2A9D8F;
 }
 
 .footer-copyright {
@@ -84,4 +83,53 @@
     border-radius: 10px;
     height: 2px;
     background: black;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-logo {
+        flex-direction: row; /* Keep the logo and text on one line */
+        text-align: center;
+    }
+
+    .footer-logo img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .footer-logo p {
+        font-size: 18px; /* Decrease the font size of the logo text */
+    }
+
+    .footer-links {
+        flex-direction: row; /* Keep the links in a single row */
+        flex-wrap: wrap; /* Allow wrapping for small screens */
+        gap: 15px;
+        font-size: 14px; /* Decrease the font size of the links */
+        justify-content: center;
+    }
+
+    .footer-social-icon {
+        flex-direction: row; /* Keep social icons in a row */
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .footer-icons-container {
+        padding: 8px;
+        background: white;
+    }
+
+    .footer-icons-container img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .footer-copyright {
+        font-size: 12px; /* Decrease the font size of the copyright text */
+    }
+
+    .footer-copyright hr {
+        width: 90%;
+    }
 }

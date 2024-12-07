@@ -103,3 +103,9 @@
 .add-to-cart-button:hover {
     background-color: #21867a; /* Darken button on hover */
 }
+.des{
+    border: 2px solid #2A9D8F;
+    padding: 6px;
+    border-radius: 12px;
+
+}

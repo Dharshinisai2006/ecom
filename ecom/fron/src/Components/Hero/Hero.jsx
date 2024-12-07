@@ -4,20 +4,19 @@ import arrow_icon from '../Assets/arrow.png';
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className="hero">
       <div className="hero-left">
-        <h2>welcome!!</h2>
+        <h2>Welcome!!</h2>
         <div>
           <div className="hero-hand-icon">
             <p>Smart</p>
             <div className="log"></div>
           </div>
-          <p>Farm</p>
-          <p>Starts Here</p>
+          <p className="hero-text">Farm Starts Here</p>
         </div>
         <div className="hero-latest-btn">
-          <div>look out!</div>
-          <img src={arrow_icon} alt="" />
+          <div>Look Out!</div>
+          <img src={arrow_icon} alt="arrow" />
         </div>
       </div>
       <div className="hero-right">

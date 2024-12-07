@@ -20,6 +20,7 @@ const {addToCart}=useContext(ShopContext);
                 </div>
                 <div className="product-display-img">
                     <img className='product-display-main-img' src={product.image} alt="" />
+                  
                 </div>
             </div>
             <div className="product-display-right">
@@ -31,6 +32,9 @@ const {addToCart}=useContext(ShopContext);
                     <img src={star_icon} alt="" />
                     <img src={star_dull_icon} alt="" />
                     <p>(122)</p>
+                    </div>
+                    <div className="des">
+                    <p>{product.description}</p>
                 </div>
                 <div className="product-display-right-prices">
                     <div className="product-display-right-price-old">
